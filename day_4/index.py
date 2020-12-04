@@ -73,10 +73,10 @@ def validate_pid(pid):
 
 def main():
     records = getRecords()
-    valid_records = list(filter(lambda l: hasAllKeys(l), records))
+    valid_records = list(filter(hasAllKeys, records))
     print("Solution a:", len(valid_records))
 
-    fully_valid_records = list(filter(lambda l: hasValidValues(l), valid_records))
+    fully_valid_records = list(filter(hasValidValues, valid_records))
     print("Solution b:", len(fully_valid_records))
 
 main()
